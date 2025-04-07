@@ -32,9 +32,11 @@ By using this software, you agree that:
 4. ⚖️ EXPORT LAWS & RESTRICTIONS
 
 Don’t use or export this software into countries under U.S. embargo, or to anyone on terrorist watchlists. If you do, I didn’t see shit, I don’t know shit, and you’re on your own. Although that's already the case.
+
 5. 🛑 TERMINATION CLAUSE
 
 If you violate these terms or act like a complete jackass, your permission to use this tool is revoked immediately. I will not send help. In fact, I will laugh.
+
 6. 🧾 FINAL NOTE
 
 This is a tool, not a toy. If your first instinct is to scan random government domains or “see if it works on NASA,” please uninstall this, go outside, and rethink your life or touch grass.
