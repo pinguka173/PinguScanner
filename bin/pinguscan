@@ -1,0 +1,7 @@
+#!/bin/bash
+
+SCRIPT_PATH="$(readlink -f "$0")"
+SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
+ROOT_DIR="$(dirname "$SCRIPT_DIR")"
+
+python3 "$ROOT_DIR/src/main.py" "$@"
