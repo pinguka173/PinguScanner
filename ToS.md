@@ -6,6 +6,7 @@ Effective Date: 04-05-2025.
 PinguScanner (hereafter “The Software”) is intended solely for educational, research, and lawful diagnostic purposes. You agree to only use this software on systems and networks you own, have explicit permission to scan, or operate in a legal lab environment.
 
 If you use this for anything else, congratulations: you're a criminal, and you’ve just volunteered to be the star of the next FBI training slideshow. If you ignore this and point it at federal infrastructure, that’s 100% on you. The developer bear no responsibility for your actions, your court date, or your cellmate. But I'll pray for you.
+
 2. 🧠 NO LIABILITY
 
 The author(s) of this software bear zero responsibility for any damage, disruption, or pants-shitting federal charges resulting from its use. That includes (but is not limited to):
@@ -19,6 +20,7 @@ The author(s) of this software bear zero responsibility for any damage, disrupti
     National security breaches (looking at you, little script kiddie)
 
 Basically: you fuck around, you find out. Not my problem.
+
 3. 📜 YOU BREAK IT, YOU BOUGHT IT
 
 By using this software, you agree that:
