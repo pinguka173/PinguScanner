@@ -16,37 +16,10 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 # ANSI Color Codes
 RED = "\033[91m"
 GREEN = "\033[92m"
+REALLY_GREEN = "\033[38;5;46m"
 YELLOW = "\033[93m"
 BLUE = "\033[94m"
 RESET = "\033[0m"   # Resets color to original
-
-if len(sys.argv) > 1 and sys.argv[1] in ("--help"):
-    print("""
-Usage: pinguscan -s <target> -p <preset> [-t <timeout>]
-Example: pinguscan -s scanme.nmap.org -p web -t 20
-
-Use pinguscan --commands for commands list
-        """)
-    sys.exit(0)
-
-if len(sys.argv) > 1 and sys.argv[1] in ("--commands"):
-    print()
-    print("--help                     |   Displays basic information about the program")
-    print("--commands                 |   Displays all available commands and usage")
-    print("--presets                  |   Displays all available presets")
-    print("--presets-details {preset} |   Displays the given preset's content")
-    print("--update                   |   Updates to the newest version")
-    print("-V, --version              |   Displays current version")
-    print("-s {target}                |   Sets a target IP/Domain for the scan")
-    print("-p {preset}                |   Sets a port preset")
-    print("-t {value}                 |   Sets a timeout for the scan")
-    print()
-    sys.exit(0)
-
-if len(sys.argv) > 0 and sys.argv[1] in ("-V") or len(sys.argv) > 0 and sys.argv[1] in ("--version"):
-    print("PinguScan/v1.2.0")
-    print("Release date: 04-07-2025")
-    sys.exit(0)
 
 def list_presets():
     presets_path = os.path.join(os.path.dirname(__file__), "presets", "port_presets.json")
@@ -64,8 +37,6 @@ def list_presets():
     for name in presets:
         print(name)
     sys.exit(0)
-
-
 
 
 
@@ -166,6 +137,12 @@ def Connect(ip, hostname, ports, timeout, services_db):
                 print(RED + f"[-] Port {port} timed out." + RESET)
             except socket.error as e:
                 print(RED + f"[-] Port {port} connection error: {e}" + RESET)
+
+    if len(open_ports)>0:
+        print(REALLY_GREEN + f"Open ports: {open_ports}" + RESET)
+    else:
+        print("No open ports found. Either no open ports withing the scanned range you're you're a dumbass and fucked up the preset. Check presets.json or change the preset.")
+
     return open_ports
 
 if __name__ == "__main__":

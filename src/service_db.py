@@ -1,6 +1,11 @@
-def load_services(filename="nmap-services"):
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+SERVICES_FILE = BASE_DIR / "nmap-services"
+
+def load_services(filename=SERVICES_FILE):
     port_map = {}
-    with open(filename, "r") as f:
+    with open(filename, "r", encoding="utf-8", errors="ignore") as f:
         for line in f:
             if line.startswith("#") or not line.strip():
                 continue

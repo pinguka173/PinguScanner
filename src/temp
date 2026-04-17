@@ -1,0 +1,27 @@
+if len(sys.argv) > 1 and sys.argv[1] in ("--help"):
+    print("""
+Usage: pinguscan -s <target> -p <preset> [-t <timeout>]
+Example: pinguscan -s scanme.nmap.org -p web -t 20
+
+Use pinguscan --commands for commands list
+        """)
+    sys.exit(0)
+
+if len(sys.argv) > 1 and sys.argv[1] in ("--commands"):
+    print()
+    print("--help                     |   Displays basic information about the program")
+    print("--commands                 |   Displays all available commands and usage")
+    print("--presets                  |   Displays all available presets")
+    print("--presets-details {preset} |   Displays the given preset's content")
+    print("--update                   |   Updates to the newest version")
+    print("-V, --version              |   Displays current version")
+    print("-s {target}                |   Sets a target IP/Domain for the scan")
+    print("-p {preset}                |   Sets a port preset")
+    print("-t {value}                 |   Sets a timeout for the scan")
+    print()
+    sys.exit(0)
+
+if len(sys.argv) > 0 and sys.argv[1] in ("-V") or len(sys.argv) > 0 and sys.argv[1] in ("--version"):
+    print("PinguScan/v1.2.0")
+    print("Release date: 04-07-2025")
+    sys.exit(0)
