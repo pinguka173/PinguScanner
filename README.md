@@ -19,8 +19,8 @@ Run the following in your terminal:
 ```bash
 git clone https://github.com/pinguka173/PinguScanner.git
 cd PinguScanner
-chmod +x version.sh
-python3 -m pip install -r requirements.txt
+chmod +x install.sh
+sudo ./install.sh
 ```
 
 ---
