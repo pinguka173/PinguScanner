@@ -17,7 +17,7 @@ A lightweight Python tool to scan websites and IP addresses — fast, simple, an
 Run the following in your terminal:
 
 ```bash
-git clone https://github.com/yourusername/PinguScanner.git
+git clone https://github.com/pinguka173/PinguScanner.git
 cd PinguScanner
 chmod +x version.sh
 python3 -m pip install -r requirements.txt
